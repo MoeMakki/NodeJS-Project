@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-secondary">
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item me-6"> 
+                    <a class="nav-link text-white" href="/"><i class="bi bi-house-door"></i> Shop</a>
+                </li>
+                <li class="nav-item me-6"> 
+                    <a class="nav-link text-white" href="/products"><i class="bi bi-box"></i> Products</a>
+                </li>
+                <%if(isAdmin || isAuthenticated){ %>
+                <li class="nav-item me-6"> 
+                    <a class="nav-link text-white" href="/cart"><i class="bi bi-cart"></i> Cart</a>
+                </li>
+                <%}%>
+                <li class="nav-item me-6"> 
+                    <a class="nav-link text-white" href="/about"><i class="bi bi-cart"></i> About Us</a>
+                </li>
+
+                
+                <% if(isAdmin) { %>
+                    <li class="nav-item me-6">
+                        <a class="nav-link text-white" href="/admin/add-product"><i class="bi bi-plus-square"></i> Add Product</a>
+                    </li>
+                    <li class="nav-item me-6"> 
+                        <a class="nav-link text-white" href="/orders"><i class="bi bi-list-check"></i> Orders</a>
+                    </li>
+                    <li class="nav-item me-6"> 
+                        <a class="nav-link text-white" href="/admin/products"><i class="bi bi-pencil-square"></i> Admin Products</a>
+                    </li>
+                <% } %>
+
+            </ul>
+            
+            
+            <% if(!isAuthenticated) { %>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-6"> 
+                        <a class="nav-link text-white" href="/auth/login"><i class="bi bi-lock"></i> Login</a>
+                    </li>
+                </ul>
+            <% } %>
+
+            
+            <% if(isAuthenticated) { %>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"> 
+                        <a class="nav-link text-white" href="/auth/logout"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                    </li>
+                </ul>
+            <% } %>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid" style="margin-top: 30px;">
+    <div class="row">
+        <div class="col-sm-10">
+            
+        </div>
+    </div>
+</div>

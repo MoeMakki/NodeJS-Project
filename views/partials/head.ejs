@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%- include('../partials/includes') %>
+    <style>
+        
+        .jumbotron {
+            background-color: #343a40; 
+            color: white; 
+            padding: 40px 20px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            border-radius: 10px; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+        .jumbotron img {
+            width: 120px; 
+            height: auto; 
+            margin-right: 30px; 
+            border-radius: 10px; /
+        }
+        .jumbotron h1 {
+            font-size: 36px; 
+            margin: 0; 
+            font-weight: bold; 
+        }
+        .jumbotron p {
+            font-size: 20px; 
+            margin-top: 10px; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="jumbotron text-center">
+        <!-- Logo/Image on the left -->
+        <img src="/public/spare-parts-auto-part-logo-260nw-2451256709.webp" alt="Header Image" class="img-fluid">
+        
+        <!-- Text Content on the right -->
+        <div>
+            <h1>Car Auto Spare Parts Shop</h1>
+            <p>Welcome to the Auto Spare Parts Shop</p>
+        </div>
+    </div>
+
+</body>
+</html>

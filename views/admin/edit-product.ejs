@@ -1,0 +1,36 @@
+<%- include('../partials/head', {title: PageTitle}) %>
+<%- include('../partials/nav') %>
+
+<div class="container" style="margin-top: 40px;">
+    <h1 class="text-center mb-4">Edit a Product</h1>
+    <form method="post" action="/admin/edit-product">
+        <div class="form-group mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" value="<%= products.name %>" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="price" class="form-label">Price:</label>
+            <input type="text" class="form-control" id="price" name="price" value="<%= products.price %>" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="desc" class="form-label">Description:</label>
+            <input type="text" class="form-control" id="desc" name="desc" value="<%= products.description %>" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="url" class="form-label">Image URL:</label>
+            <input type="text" class="form-control" id="url" name="url" value="<%= products.imageURL %>" required>
+        </div>
+
+        
+        <input type="hidden" value="<%= products._id %>" name="id">
+
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary mt-3">Edit Product</button>
+        </div>
+    </form>
+</div>
+
+<%- include('../partials/footer') %>
